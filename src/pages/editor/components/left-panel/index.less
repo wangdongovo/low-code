@@ -1,6 +1,32 @@
 .left-panel {
-    width: 240px;
-    height: calc(100vh - 48px);
-    background: #fff;
-    border-right: 1px solid #12112a12;
+  width: 240px;
+  height: calc(100vh - 48px);
+  background: #fff;
+  border-right: 1px solid #12112a12;
+
+  .tab-bar {
+    height: 40px;
+    border-bottom: 1px solid #12112a12;
+
+    display: flex;
+    align-items: center;
+
+    .tab-item {
+      width: 56px;
+      height: 40px;
+      line-height: 40px;
+      cursor: default;
+      text-align: center;
+      color: #555557;
+      span {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+
+    .active {
+      color: #19191a;
+      font-weight: 500;
+    }
+  }
 }
