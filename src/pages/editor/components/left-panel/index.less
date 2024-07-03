@@ -29,4 +29,40 @@
       font-weight: 500;
     }
   }
+
+  .library {
+
+
+
+    padding: 8px 8px 0 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
+    gap: 16px 7px;
+    justify-items: center;
+    .library-item {
+      width: 108px;
+      .icon {
+        width: 100%;
+        height: 67.5px;
+        border-radius: 4px;
+        box-shadow: 0 0 0 1px #12112a0d;
+        object-fit: cover;
+      }
+
+      .name {
+        padding-top: 8px;
+        text-align: left;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        width: 100%;
+        color: #19191a;
+        font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+      }
+    }
+  }
 }

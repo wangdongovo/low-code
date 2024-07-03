@@ -10,7 +10,7 @@ const LeftPanel = () => {
     },
     {
       id: 2,
-      name: '资源',
+      name: '模版',
       active: false
     }
   ])
@@ -34,6 +34,24 @@ const LeftPanel = () => {
             <span>{item.name}</span>
           </div>
         ))}
+      </div>
+
+
+
+      <div className='library'>
+
+        <div className='library-item'>
+          <img className='icon' src="https://pixso-pub.oss-cn-hangzhou.aliyuncs.com/cmt-lib-pc/YY8RfSXyAW6vrTtlTtp88A?1655084236" alt=""  />
+          <span className='name'>美味食物图标</span>
+        </div>
+        <div className='library-item'>
+          <img className='icon' src="https://pixso-pub.oss-cn-hangzhou.aliyuncs.com/cmt-lib-pc/YY8RfSXyAW6vrTtlTtp88A?1655084236" alt=""  />
+          <span className='name'>美味食物图标</span>
+        </div>
+        <div className='library-item'>
+          <img className='icon' src="https://pixso-pub.oss-cn-hangzhou.aliyuncs.com/cmt-lib-pc/YY8RfSXyAW6vrTtlTtp88A?1655084236" alt=""  />
+          <span className='name'>美味食物图标</span>
+        </div>
       </div>
     </div>
   )
