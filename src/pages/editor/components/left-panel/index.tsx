@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
+
 import './index.less'
 
 const LeftPanel = () => {
@@ -10,7 +11,7 @@ const LeftPanel = () => {
     },
     {
       id: 2,
-      name: '模版',
+      name: '模板',
       active: false
     }
   ])
@@ -20,6 +21,13 @@ const LeftPanel = () => {
       tab.id === item.id ? { ...tab, active: true } : { ...tab, active: false }
     )
     setTabBar(updatedTabBar)
+  }
+
+  const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
+
+    console.log('e', e);
+    
+    e.dataTransfer.setData('itemId', '24213124')
   }
 
   return (
@@ -36,21 +44,14 @@ const LeftPanel = () => {
         ))}
       </div>
 
-
-
-      <div className='library'>
-
-        <div className='library-item'>
-          <img className='icon' src="https://pixso-pub.oss-cn-hangzhou.aliyuncs.com/cmt-lib-pc/YY8RfSXyAW6vrTtlTtp88A?1655084236" alt=""  />
-          <span className='name'>美味食物图标</span>
-        </div>
-        <div className='library-item'>
-          <img className='icon' src="https://pixso-pub.oss-cn-hangzhou.aliyuncs.com/cmt-lib-pc/YY8RfSXyAW6vrTtlTtp88A?1655084236" alt=""  />
-          <span className='name'>美味食物图标</span>
-        </div>
-        <div className='library-item'>
-          <img className='icon' src="https://pixso-pub.oss-cn-hangzhou.aliyuncs.com/cmt-lib-pc/YY8RfSXyAW6vrTtlTtp88A?1655084236" alt=""  />
-          <span className='name'>美味食物图标</span>
+      <div className="library">
+        <div className="library-item" draggable onDragStart={(e) => handleDragStart(e)}>
+          <img
+            className="icon"
+            src="https://pixso-pub.oss-cn-hangzhou.aliyuncs.com/cmt-lib-pc/YY8RfSXyAW6vrTtlTtp88A?1655084236"
+            alt=""
+          />
+          <span className="name">美味食物图标</span>
         </div>
       </div>
     </div>
